@@ -21,6 +21,27 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
+let dataId = 0;
+
+// Routes
+app.get('/all', (req, res) => {
+	res.send(projectData);
+});
+
+app.post('/add', (req, res) => {
+	console.log('addREQUSt', req.body);
+	const newData = {
+		date: req.body.date,
+		temp: req.body.temp,
+		content: req.body.content
+	};
+
+	projectData[dataId] = newData;
+
+	dataId+= 1;
+	// res.send('Post added');
+	console.log('Added Data', projectData);
+});
 
 // Setup Server
 const port = 8000;
