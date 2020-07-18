@@ -1,7 +1,6 @@
 /* Global Variables */
-const apiKey = 'bc5a9f9d5bd7918efbf812f1fabb004d';
+const apiKey = 'bc5a9f9d5bd7918efbf812f1fabb004d&units=imperial';
 const apiUrl = `http://api.openweathermap.org/data/2.5/weather`;
-// const baseUrl = `api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`;
 const zipCodeInput = document.getElementById('zip');
 const feelingsInput = document.getElementById('feelings');
 const generateBtn = document.getElementById('generate');
